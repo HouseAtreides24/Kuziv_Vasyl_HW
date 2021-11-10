@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .divbox{
+            width: 100px;
+            background: aqua;
+            height: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    let str1='hello', str2  = 'owu',str3='com', str4 = 'ua';
+    let int1=1, int2=10, int3=-999,int4=123,int5=16;
+    const  PI = 3.14;
+    let real1=2.7, real2=2.7;
+    let bool1=true,bool2=false;
+    let elements = [str1,str2,str3,str4,int1,int2,int3,int4,int5,PI,real1,real2,bool1,bool2];
+    for (let i=0;i<elements.length; i++){
+        console.log(elements[i]);
+        //alert(elements[i]);
+        document.write(`<div class="divbox">${elements[i]}</div>`)
+    }
+    str1='www';
+    str2='qwe';
+    str3='ertyurtu';
+    str4='2365';
+    int5=5;int4=4;int3=4;int2=12;int1=34;
+    real2=1.4;
+    let elements1 = [str1,str2,str3,str4,int1,int2,int3,int4,int5,PI,real1,real2,bool1,bool2];
+    for (let i=0;i<elements1.length; i++){
+        console.log(elements1[i]);
+        //alert(elements1[i]);
+        document.write(`<div>${elements1[i]}</div>`)
+    }
+    // let age = prompt('Сколько тебе лет?', 100);
+    //
+    // alert(`Тебе ${age} лет!`); // Тебе 100 лет!
+
+    let firstName = 'Kuziv';
+    let middleName = 'Vasyl';
+    let lastName = 'Vasylovych';
+    let person = `${firstName} ${middleName} ${lastName}`
+    document.write(`<div>${person}</div>`)
+
+    // let firstName1 = prompt('Enter your firstname:', );
+    // let middleName1 = prompt('Enter your middelname:', );
+    // let age = prompt('Enter your age:', );
+    // document.write(`<div>${'Вітаю '}${firstName1} ${middleName1}${'. Тобі'} ${age} ${'років'}</div>`);
+
+    let a = 100; let b = '100'; let c = true;
+    console.log(typeof a);
+    console.log(typeof b);
+    console.log(typeof c);
+
+    document.write(`<div>${5<6}</div>`)
+    document.write(`<div>${5==6}</div>`)
+    document.write(`<div>${5===6}</div>`)
+    document.write(`<div>${5>6}</div>`)
+    document.write(`<div>${10 == 10}</div>`)
+    document.write(`<div>${10 != 10}</div>`)
+    document.write(`<div>${10 < 10}</div>`)
+    document.write(`<div>${10 > 10}</div>`)
+
+    let str = "20";
+    let a1 = 5;
+    document.write(str + a1 + "<br/>");
+    // В даному випадку при додаванні стрічки і числа відбувається неявне приведення(конкатенація)
+    document.write(str - a1 + "<br/>");
+    document.write(str * "2" + "<br/>");
+    document.write(str / 2 + "<br/>");
+    //При всіх інших діях над стрічкою, спочатку перевіряється чи один з елементів можна привести до числа:
+    // якщо так, то ми отримуємо числовий результат , якщо ні то - NaN
+
+
+</script>
+
+</body>
+</html>
