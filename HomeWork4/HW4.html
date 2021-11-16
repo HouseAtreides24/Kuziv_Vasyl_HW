@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .target{
+            background: goldenrod;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<script>
+
+    // - створити функцію яка обчислює та повертає площу прямокутника висотою
+    function  area(height,width){
+        return height*width;
+    }
+    console.log(area(3,5))
+    // - створити функцію яка обчислює та повертає площу кола
+    const PI = 3.14;
+    function area_c(radius){
+        return PI*radius*radius/4;
+    }
+    console.log(area_c(5))
+    // - створити функцію яка обчислює та повертає площу циліндру
+    function cylinder(radius,height){
+        return (PI*radius*radius/4)*height;
+    }
+    console.log(cylinder(5,4));
+    // - створити функцію яка приймає масив та виводить кожен його елемент
+    let array4_5 = new Array();
+    array4_5[0] = 2;
+    array4_5[1] = "Kuziv";
+    array4_5[2] = true;
+    array4_5[3] = false;
+    array4_5[4] = NaN;
+    array4_5[5] = 3.5;
+    array4_5[6] = 7;
+    array4_5[7] = 22;
+    array4_5[8] = 3.45;
+    array4_5[9] = false ;
+    function element_of_array(array){
+        for (let i=0;i<array.length;i++){
+            console.log(array[i])
+        }
+    }
+    element_of_array(array4_5);
+    // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+    let text  = "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
+        " Enim eum explicabo illo iure minus qui quis recusandae temporibus vel veniam." +
+        " Accusantium cumque expedita in mollitia nam officiis, placeat ratione tempora."
+    function paragraph(text){
+        document.write(`<p class="target">${text}</p>`)
+    }
+    paragraph(text);
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function  list(some_text){
+        document.write("<lu>")
+        for (let i=0;i<3;i++){
+            document.write(`<li>${some_text}</li>`)
+        }
+        document.write("</lu>")
+    }
+    list(text);
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+    //     Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+    function  list2(some_text,lies){
+        document.write("<lu>")
+        for (let i=0;i<lies;i++){
+            document.write(`<li class="target">${some_text}</li>`)
+        }
+        document.write("</lu>")
+    }
+    list2(text,5);
+    // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    function  list_array(some_aray){
+        document.write("<lu>")
+        for (let i=0;i<some_aray.length;i++){
+            document.write(`<li>${some_aray[i]}</li>`)
+        }
+        document.write("</lu>")
+    }
+    list_array(array4_5);
+
+    // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. ' +
+    // 'Для кожного об'єкту окремий блок.
+    let user1  = {id:240491 , name:"Vasya",age:30}
+    let user2  = {id:240494 , name:"Ivan",age:26}
+    let user3  = {id:240495 , name:"Oksana",age:21}
+    let user4  = {id:240391 , name:"Igor",age:19}
+    let user5  = {id:220491 , name:"Vova",age:26}
+    let user6  = {id:270391 , name:"Ivanka",age:34}
+    let user_array = [user1,user2,user3,user4,user5,user6];
+        //document.write(`<div class="target"> ${key}   ${user_array[key]</div>`)
+    for (let i = 0;i<user_array.length;i++){
+        document.write(`<div> USER ${i} </div>`)
+        for (let key in user_array[i]){
+            document.write(`<div class="target"> ${key} - ${user_array[i][key]} </div>`)
+        }
+    }
+    //- створити функцію, яка якщо приймає один аргумент,
+    // просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
+
+</script>
+
+</body>
+</html>

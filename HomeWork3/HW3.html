@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .block1{
+            background: red;
+        }
+        .block2{
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // // --створити масив з:
+    // //     - з 5 числових значень
+    // // - з 5 стічкових значень
+    // // - з 5 значень стрічкового, числового та булевого типу
+    // // - та вивести його в консоль
+    // let rez = new Array();
+    // for (let i=0;i<5;i++){
+    //     let int = Math.floor(Math.random()*20);
+    //     rez[i]=int;
+    // }
+    // console.log(rez);
+    //
+    // let str1 = "Kuziv";
+    // let str2 = "Vasya";
+    // let str3 = "Ivano-Frankivsk"
+    // let str4 = "Hrushka"
+    // let str5 = "human"
+    // let arr_2 = [str5,str4,str3,str2,str1];
+    // console.log(arr_2);
+    //
+    // let arr_3 = ["Second",true,4,"First",false];
+    // console.log(arr_3);
+    //
+    // // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу.
+    // //     Вивести в консоль
+    // let arr_21 = [];
+    // arr_21[3]="4";
+    // arr_21[5]="4";
+    // arr_21[7]="4";
+    // console.log(arr_21);
+    //
+    // // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+    // // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+    // // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+    // // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+    // let str31 = "Text1 - index";
+    // let str32 = "Text2 - index";
+    // let str33 = "Text3 - index";
+    // let str34 = "Text4 - index";
+    // let str35 = "Text5 - index";
+    // let str36 = "Text6 - index";
+    // let str37 = "Text7 - index";
+    // let str38 = "Text8 - index";
+    // let str39 = "Text9 - index";
+    // let str310 = "Text10 - index";
+    // let str_array = [str31,str32,str33,str34,str35,str36,str37,str38,str39,str310];
+    // for (let i =0;i<str_array.length;i++){
+    //     if (i%2==0){document.write(`<div class="block1">${str_array[i]} ${i}</div>`)
+    //     }else
+    //     document.write(`<div class="block2">${str_array[i]} ${i}</div>`)
+    // }
+    // let str_array2 = [str31,str32,str33,str34,str35,str36,str37,str38,str39,str310,str5,str4,str3,str2,str1,str5,str4,str3,str2,str1];
+    // let index=0;
+    // while (index<str_array2.length){
+    //     if (index%2==0){
+    //         document.write(`<h1 class="block2">${str_array2[index]} ${index}</h1>`)
+    //     }else document.write(`<h1 class="block1">${str_array2[index]} ${index}</h1>`)
+    //     index++;
+    // }
+    //
+    // // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+    // // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+    // // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+    // // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+    // // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+    // // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+    //
+    // let int_array = [];
+    // let str_array4 = [];
+    // for (let i = 0;i<10;i++){
+    //     int_array[i]=i;
+    //     str_array4[i]="Element - "+(i+1);
+    // }
+    // console.log(int_array);
+    // console.log(str_array4);
+    //
+    // let new_array = [1,4,"123",true,false,1.23,"wwwww",false,false,9];
+    // for (let i=0;i<new_array.length;i++){
+    //     console.log(new_array[i]);
+    // }
+    // for (let i=0;i<new_array.length;i++){
+    //   if ((typeof new_array[i])==="boolean"){
+    //       console.log(new_array[i]);
+    //   }
+    // }
+    // console.log(typeof 3);
+    // for (let i=0;i<new_array.length;i++){
+    //     if ((typeof new_array[i])==="string"){
+    //         console.log(new_array[i]);
+    //     }
+    // }
+    // for (let i=0;i<new_array.length;i++){
+    //     if ((typeof new_array[i])==="number"){
+    //         console.log(new_array[i]);
+    //     }
+    // }
+
+    // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів.
+    // Вивести в консоль всі його елементи в циклі.
+    // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+    // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+    // let array4_5 = new Array();
+    // array4_5[0] = 2;
+    // array4_5[1] = "Kuziv";
+    // array4_5[2] = true;
+    // array4_5[3] = false;
+    // array4_5[4] = NaN;
+    // array4_5[5] = 3.5;
+    // array4_5[6] = 7;
+    // array4_5[7] = 22;
+    // array4_5[8] = 3.45;
+    // array4_5[9] = false ;
+    // for (let i=0;i<array4_5.length;i++){
+    //     console.log(array4_5[i])
+    // }
+    // for (let i=0;i<10;i++){
+    //     console.log(i)
+    //     document.write(`${i} `)
+    // }
+    // document.write('<div> </div>')
+    // for (let i=0;i<100;i++){
+    //     console.log(i)
+    //     document.write(`${i} `)
+    // }
+    // document.write('<div> </div>')
+    // for (let i=0;i<100;i+=2){
+    //     console.log(i)
+    //     document.write(`${i} `)
+    // }
+    // document.write('<div> </div>')
+    // for (let i=0;i<100;i++){
+    //     if (i%2==0){
+    //         console.log(i)
+    //         document.write(`${i} `)
+    //     }
+    // }
+    //
+    // document.write('<div> </div>')
+    // for (let i=0;i<100;i++){
+    //     if (i%2!=0){
+    //         console.log(i)
+    //         document.write(`${i} `)
+    //     }
+    // }
+
+
+
+</script>
+
+</body>
+</html>
