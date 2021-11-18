@@ -111,7 +111,6 @@
     //         console.log(new_array[i]);
     //     }
     // }
-
     // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів.
     // Вивести в консоль всі його елементи в циклі.
     // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
@@ -119,7 +118,6 @@
     // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
     // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
     // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-
     // let array4_5 = new Array();
     // array4_5[0] = 2;
     // array4_5[1] = "Kuziv";
@@ -164,6 +162,157 @@
     //     }
     // }
 
+    // 1. Створити пустий масив та :
+    //     a. заповнити його 50 парними числами за допомоги циклу.
+    //     b. заповнити його 50 непарними числами за допомоги циклу.
+    //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+    // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+    //
+    // let array2 = new Array();
+    // let array1 = new Array();
+    // elements2 = 2;
+    // elements1 = 1;
+    // for (let i=0;i<50;i++){
+    //     array2[i] = elements2;
+    //     elements2=elements2+2;
+    //     array1[i] = elements1;
+    //     elements1=elements1+2;
+    //     console.log(`Парні - ${array2[i]}  Непарні - ${array1[i]}`)
+    //
+    // }
+    // let array_c = new Array();
+    // for (let i=0;i<20;i++){
+    //     array_c[i]=Math.floor(Math.random()*1000);
+    //     console.log(`${array_c[i]}`)
+    // }
+    // let array_d = new Array();
+    // for (let i=0;i<20;i++){
+    //     array_c[i]=Math.floor(Math.random()*724+8);
+    //     console.log(`${array_c[i]}`)
+    // }
+
+    //2. Вивести за допомогою console.log кожен третій елемен
+    // let array_2 = new Array();
+    // for (let i=0;i<20;i++){
+    //     array_2[i]=Math.floor(Math.random()*1000);
+    //     console.log(`${i} - ${array_2[i]}`)
+    //     if (i!=0&&i%3==0){
+    //         console.log(`${array_2[i]}`)
+    //     }
+    // }
+
+    //3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+    // let array_3 = new Array();
+    // for (let i=0;i<20;i++){
+    //     array_3[i]=Math.floor(Math.random()*1000);
+    //     console.log(`${i} - ${array_3[i]}`)
+    //     if (i!=0&&i%3==0&&array_3[i]%2==0){
+    //         console.log(`${array_3[i]}`)
+    //     }
+    // }
+
+    //4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+    // let array_4 = new Array();
+    // let new_array4 = new Array();
+    // let index = 0;
+    // for (let i=0;i<20;i++){
+    //     array_4[i]=Math.floor(Math.random()*1000);
+    //     console.log(`${i} - ${array_4[i]}`)
+    //     if (i!=0&&i%3==0&&array_4[i]%2==0){
+    //         console.log(`${array_4[i]}`)
+    //         new_array4[index]=array_4[i];
+    //         index++;
+    //     }
+    // }
+    // console.log(`${new_array4}`)
+
+    // 5. Вивести кожен елемент масиву, сусід справа якого є парним
+    //EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
+    // let array5 = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+    // for (let i=1;i<array5.length;i++){
+    //     if (array5[i]%2==0){
+    //         console.log(`${array5[i-1]}`)
+    //     }
+    // }
+
+    // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
+    // let array6 = [100,250,50,168,120,345,188];
+    // let sum = 0;
+    // for (let i =0;i<array6.length;i++){
+    //     sum+=array6[i]
+    // }
+    // console.log(`${Math.floor(sum/array6.length)}`)
+
+    // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+    // let array7 =new Array();
+    // let array7_2 = new Array();
+    // for (let i =0;i<10;i++){
+    //     array7[i] = Math.floor(1/Math.random());
+    //     array7_2[i] = array7[i]*5;
+    //     console.log(`${array7[i]} - ${array7_2[i]}`)
+    // }
+
+    // - Дано 2 масиви з рівною кількістю об'єктів.
+    // Масиви:
+    //     let usersWithId = [
+    //         {id: 1, name: 'vasya', age: 31, status: false},
+    //         {id: 2, name: 'petya', age: 30, status: true},
+    //         {id: 3, name: 'kolya', age: 29, status: true},
+    //         {id: 4, name: 'olya', age: 28, status: false}
+    //     ];
+    //
+    // let citiesWithId = [
+    //     {user_id: 3, country: 'USA', city: 'Portland'},
+    //     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    //     {user_id: 2, country: 'Poland', city: 'Krakow'},
+    //     {user_id: 4, country: 'USA', city: 'Miami'}
+    // ];
+    //
+    // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+    //     Записати цей об'єкт в новий масив
+    // Example:
+    //     let usersWithCities = [
+    //         {
+    //             id: 1, // <===
+    //             name: 'vasya',
+    //             age: 31,
+    //             status: false,
+    //             address: {
+    //                 user_id: 1, // <===
+    //                 country: 'Ukraine',
+    //                 city: 'Ternopil'
+    //             }
+    //         },
+    //         // TO BE CONTINUED .....
+    //     ]
+    // let usersWithId = [
+    //         {id: 1, name: 'vasya', age: 31, status: false},
+    //         {id: 2, name: 'petya', age: 30, status: true},
+    //         {id: 3, name: 'kolya', age: 29, status: true},
+    //         {id: 4, name: 'olya', age: 28, status: false}
+    //     ];
+    // let citiesWithId = [
+    //     {user_id: 3, country: 'USA', city: 'Portland'},
+    //     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    //     {user_id: 2, country: 'Poland', city: 'Krakow'},
+    //     {user_id: 4, country: 'USA', city: 'Miami'}
+    // ];
+    // let rez = new Array();
+    // for (let i = 0;i<usersWithId.length;i++){
+    //     for (let j =0;j<citiesWithId.length;j++){
+    //         if (usersWithId[i].id == citiesWithId[j].user_id){
+    //             for (let key in usersWithId){
+    //                 // var obj = { a: 1 };
+    //                 // var copy = Object.assign({}, obj);
+    //                 rez[i] = Object.assign({},usersWithId[i])
+    //                 rez[i]["addres"] = citiesWithId[j];
+    //                 //rez[i] = {key : usersWithId[key], addrees : citiesWithId[j]}
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
+    // console.log(rez);
 
 
 </script>
