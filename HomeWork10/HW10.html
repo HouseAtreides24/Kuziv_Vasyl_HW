@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <input type="button" id="xxx" value="Exercise_1"/>
+    <input type="button" id="xxx2" value="Exercise_2"/>
+
+    <input type="button" id="xxx31" value="Message"/>
+    <input type="text" id="xxx3" value=""/>
+
+
+    <div id="nav">
+        <div class="menu-item">
+            Меню 1
+            <div class="submenu">
+                Пункт 1
+            </div>
+            <div class="submenu">
+                Пункт 2
+            </div>
+            <div class="submenu">
+                Пункт 3
+            </div>
+            <div class="submenu">
+                Пункт 4
+            </div>
+            <div class="submenu">
+                Пункт 5
+            </div>
+        </div>
+    </div>
+
+
+</head>
+<body>
+
+<script>
+    //- Создать произвольный елемент с id = text.
+    // Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
+    let text_with_id = document.createElement('div');
+    text_with_id.id = 'text';
+    text_with_id.innerText = "sdgdsfgdfg"
+    document.body.appendChild(text_with_id)
+    console.log(document.getElementById('text'))
+
+    let button1 = document.getElementById('xxx')
+    button1.onclick = function (){
+        text_with_id.hidden=true;
+    }
+//- Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+    let button2 = document.getElementById('xxx2')
+    button2.onclick = function (){
+        button2.hidden = true
+    }
+
+//- створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+    // При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+    // та повідомити про це користувача
+let buttoon3 = document.getElementById('xxx31');
+    buttoon3.onclick = function (){
+        let age = document.getElementById('xxx3').value;
+        if (age < 18){
+            console.log("Вам менше 18 років")
+        }else (
+            console.log("Вам більше 18 років")
+        )
+    }
+
+// - Создайте меню, которое раскрывается/сворачивается при клике
+
+    let menuElement = document.getElementsByClassName('menu-item')[0];
+    let status4 = true;
+    menuElement.onclick = function (){
+        if (status4){
+            for (const subMenu of menuElement.children) {
+            subMenu.hidden = true;
+            }
+        status4=false;
+        }else{for (const subMenu of menuElement.children) {
+            subMenu.hidden = false;
+        }
+            status4=true;
+        }
+
+    }
+        // - Создать список комментариев , пример объекта коментария -
+    // {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+        // Вывести список комментариев в документ, каждый в своем блоке.
+        // Добавьте каждому комментарию по кнопке для сворачивания его body.
+let ourArray = [
+    {title : 'Real', body : "Ronaldo is the best player"},
+    {title : 'Barselona', body : "Messi is the best player"},
+    {title : 'Chelsy', body : "Drogba is the best player"},
+    {title : 'Arsenal', body : "Henry is the best player"},
+    {title : 'Milan', body : "Maldini is the best player"}
+]
+    let mainDiv = document.createElement('div')
+    let h1Main= document.createElement('h1')
+    h1Main.innerText = 'menu'
+    mainDiv.appendChild(h1Main)
+
+    let statusClub = true;
+    for (const club of ourArray) {
+        let divElement = document.createElement('div')
+        divTittle = document.createElement('div')
+        divTittle.innerText = club.title;
+
+        divBody = document.createElement('div')
+        divBody.classList.add(club.title)
+        divBody.innerHTML = club.body;
+
+        divElement.appendChild(divTittle)
+        divElement.appendChild(divBody)
+
+
+        let buttonElement =  document.createElement('button')
+        buttonElement.onclick = function (){
+            //  divElement.getElementsByClassName(club.title)[0].hidden = statusClub;
+            // statusClub = false;
+            divElement.getElementsByClassName(club.title)[0].style.display = 'none';
+        }
+
+        divElement.appendChild(buttonElement)
+
+
+        mainDiv.appendChild(divElement)
+    }
+    document.body.appendChild(mainDiv)
+
+</script>
+
+</body>
+</html>
